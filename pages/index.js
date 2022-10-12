@@ -87,7 +87,7 @@ export default function Home() {
                 </form>
               </div>
             </div>
-            <Image src="/images/meeting.png" height={450} width={700} />
+            <Image src="/images/meeting.png" height={450} width={700} alt="SprintMeeting"/>
           </div>
         </section>
       </main>
