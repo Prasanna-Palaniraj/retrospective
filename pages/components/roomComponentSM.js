@@ -3,7 +3,7 @@ import AvatarCard from "./userAvatar";
 import Head from "next/head";
 
 export default function RoomSubSM({ userAvatar, roomID, roomURL }) {
-  const { image, description, id } = { userAvatar };
+   const { image, description, id } = userAvatar;
   return (
     <div>
       <Head>
