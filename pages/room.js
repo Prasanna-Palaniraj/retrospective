@@ -6,7 +6,7 @@ import avatars from "../models/avatars";
 import RoomSubSM from "./components/roomComponentSM";
 import RoomSubTM from "./components/roomComponentTM";
 
-export default function room({ sessions }) {
+export default function Room({ sessions }) {
   async function addNewSession(session) {
     await fetch("api/addSession", {
       method: "POST",
