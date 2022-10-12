@@ -26,8 +26,7 @@ export default function Room({ sessions }) {
   if (type === "CreateRoom") {
     const userAvatar = avatars[0];
     addNewSession(roomID);
-    const constPath = "http://localhost:3000/room?roomID=";
-    const roomURL = constPath + roomID;
+    const roomURL = window.location.href.split("&")[0];
     return (
       <RoomSubSM userAvatar={userAvatar} roomID={roomID} roomURL={roomURL}/>
     );
