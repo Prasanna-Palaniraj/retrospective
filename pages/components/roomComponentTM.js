@@ -4,7 +4,7 @@ import Head from "next/head";
 import IntroText from "./introText";
 
 export default function RoomSubTM({ userAvatar, roomID }) {
-  const { image, description, id } = userAvatar;
+  const { image, description, id } = userAvatar || {};
   return (
     <div>
       <Head>
