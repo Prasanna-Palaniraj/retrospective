@@ -92,6 +92,13 @@
   border-color: #0070f3;
 }
 
+.icons:hover,
+.icons:focus,
+.icons:active {
+  color: #c622b0;
+  border-color: #c622b0;
+}
+
 .card h2 {
   margin: 0 0 1rem 0;
   font-size: 1.5rem;
@@ -107,6 +114,23 @@
   height: 1em;
   margin-left: 0.5rem;
 }
+
+.things {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 30%;
+  height: 100%;
+  margin: 16px;
+  float: left;
+  align-items: center;
+}
+
+.thingsWrapper {
+  align-items: strech;
+}
+
 
 @media (max-width: 600px) {
   .grid {
