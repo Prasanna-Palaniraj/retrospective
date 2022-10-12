@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
-export default function renderThings({ type, uID }) {
+export default function RenderThings({ type, uID }) {
 
   async function handleDelete(itemID){
     
