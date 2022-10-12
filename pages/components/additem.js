@@ -3,8 +3,8 @@ import AddCircleIcon from "@mui/icons-material/AddCircle";
 import Fab from "@mui/material/Fab";
 import Zoom from "@mui/material/Zoom";
 
-export default function addItem(props) {
-  const { type, uID } = props;
+export default function AddItem(props) {
+  const { type } = props;
 
   const [thing, setThing] = useState({});
   const [isExpanded, setExpanded] = useState(false);
