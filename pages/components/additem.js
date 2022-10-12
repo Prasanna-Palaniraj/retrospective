@@ -4,17 +4,18 @@ import Fab from "@mui/material/Fab";
 import Zoom from "@mui/material/Zoom";
 
 export default function AddItem(props) {
-  const { type } = props;
+  const { type, roomID } = props;
 
   const [thing, setThing] = useState({});
   const [isExpanded, setExpanded] = useState(false);
-
+  
   function handleChange(event) {
     const newDescription = event.target.value;
     setThing({
       description: newDescription,
-      postedBy: "Chutki",
+      postedBy: "Anonymous",
       type: type,
+      session: roomID,
     });
   }
 

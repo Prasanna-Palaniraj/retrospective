@@ -14,10 +14,9 @@ import Link from "next/link";
 export default function Retro() {
   const router = useRouter();
   const { uID, rID } = router.query;
-  console.log("UID is : " + uID + " rID is : " + rID);
 
   async function addToThings(thing) {
-    const { description, postedBy, type } = thing;
+    const { description, postedBy, type, session } = thing;
 
     const putRes = await fetch("api/add", {
       method: "POST",
@@ -28,6 +27,7 @@ export default function Retro() {
         description: description,
         postedBy: postedBy,
         type: type,
+        session: session,
       }),
     });
   }
@@ -62,23 +62,23 @@ export default function Retro() {
             <div className="bg-slate-200 rounded-lg text-center p-2 m-5 w-1/3">
               <h2 className="text-xl font-semibold pt-2">Things that went well</h2>
               {uID !== "2" && (
-                <AddItem onAdd={addToThings} type="Good" uID={uID} />
+                <AddItem onAdd={addToThings} type="Good" roomID={rID} />
               )}
-              <RenderThings type="Good" uID={uID} />
+              <RenderThings type="Good" uID={uID} rID={rID}/>
             </div>
             <div className="bg-slate-200 rounded-lg  text-center p-2 m-5 w-1/3">
             <h2 className="text-xl font-semibold pt-2">Things that did not go well</h2>
               {(uID === "2" || uID === "1") && (
-                <AddItem onAdd={addToThings} type="Bad" uID={uID} />
+                <AddItem onAdd={addToThings} type="Bad" roomID={rID} />
               )}
-              <RenderThings type="Bad" uID={uID} />
+              <RenderThings type="Bad" uID={uID} rID={rID}/>
             </div>
             <div className="bg-slate-200 rounded-lg  text-center p-2 m-5 w-1/3">
             <h2 className="text-xl font-semibold pt-2">Enhancements</h2>
               {uID !== "2" && (
-                <AddItem onAdd={addToThings} type="Enhancement" uID={uID} />
+                <AddItem onAdd={addToThings} type="Enhancement" roomID={rID} />
               )}
-              <RenderThings type="Enhancement" uID={uID} />
+              <RenderThings type="Enhancement" uID={uID} rID={rID}/>
             </div>
           </div>
         </section>

@@ -7,12 +7,12 @@ import RetroModel from '../../models/retroModels';
 import connectDB from '../../utils/connectdb';
 
 export default async function add(req,res){
-    const {description, postedBy, type} = req.body;
+    const {description, postedBy, type, session} = req.body;
     
     await connectDB();
 
     const newRetro = new RetroModel({
-        description, postedBy, type
+        description, postedBy, type, session
     });
     
     try{

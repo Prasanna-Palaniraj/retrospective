@@ -12,6 +12,10 @@ const retroSchema = new Schema({
     postedBy: {
         type: String,
         required: true,
+    },
+    session: {
+        type: String,
+        required: true
     }
 });
 
